@@ -38,7 +38,7 @@ def get_scatter_kwargs(color: Optional[str] = None) -> Dict[str, Any]:
 
 
 def plot_groundtruth(x: ArrayLike, y: ArrayLike, kwargs: Dict[str, Any]) -> go.Scatter:
-    return go.Scatter(x=x, y=y, name="Ground Truth (f)", **kwargs)
+    return go.Scatter(x=x, y=y, name="f", **kwargs)
 
 
 # Plotting Helper Functions
@@ -161,7 +161,6 @@ def plot_surrogate_and_acquisition(
     fig.update_xaxes(range=[-1, 7])
     fig.update_layout(
         title="Gold Search",
-        xaxis=dict(title="X"),
         sliders=[dict(active=0, steps=steps)],
     )
     return fig
